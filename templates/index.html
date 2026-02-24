@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Checker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">AI Resume Optimizer</div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <h1>AI Resume Optimizer</h1>
+    <p class="subtitle">Check resume compatibility with job description</p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label>Job Description</label>
+        <textarea name="jobdesc" placeholder="Paste job description here"></textarea>
+
+        <label>Upload Resume (PDF)</label>
+        <input type="file" name="resume" required>
+
+        <button type="submit">Analyze Resume</button>
+    </form>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 AI Resume Optimizer | Built with Flask & AI</p>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+    </div>
+</footer>
+
+</body>
+</html>

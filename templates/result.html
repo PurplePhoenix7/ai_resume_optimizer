@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume Analysis Report</h1>
+
+    <div class="score-box">
+        <h2>ATS Score</h2>
+        <span>{{ score }}%</span>
+    </div>
+
+    <h3>Keyword Match</h3>
+    <p><strong>{{ keyword_percent }}%</strong></p>
+
+    <h3>Matched Keywords</h3>
+    <ul>
+        {% for kw in matched_keywords %}
+        <li>{{ kw }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Missing Sections</h3>
+    <ul>
+        {% for sec in missing_sections %}
+        <li>{{ sec }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Suggestions</h3>
+    <ul>
+        {% for s in suggestions %}
+        <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/static/Resume_Report.pdf" class="back-btn" download>
+        Download PDF Report
+    </a>
+
+    <a href="/" class="back-btn">Check Another Resume</a>
+</div>
+
+</body>
+</html>
